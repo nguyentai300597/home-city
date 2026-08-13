@@ -60,7 +60,7 @@ function App() {
     const matchesLocation = !location || room.area.toLowerCase().includes(location.toLowerCase())
     const matchesBudget = !budget || room.price <= Number(budget)
     return matchesLocation && matchesBudget
-  }), [location, budget])
+  }), [rooms, location, budget])
 
   const toggleFavourite = id => setFavourites(current => current.includes(id) ? current.filter(item => item !== id) : [...current, id])
 
